@@ -1,0 +1,27 @@
+﻿# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Conda and virtual environments
+.conda/
+venv/
+.venv/
+
+# Raw and derived data
+data/*
+!data/data_documentation/
+!data/data_documentation/**
+
+# Temporary files and logs
+*.log
+.DS_Store
+Thumbs.db
+
+# Generated outputs
+*.tmp

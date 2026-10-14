@@ -1,0 +1,13 @@
+﻿# Data Codebook
+
+Document each dataset used in this project.
+
+For every variable, record:
+- Variable name and definition
+- Original source and series identifier
+- Units and frequency
+- Date range
+- Transformations and missing-value handling
+- Retrieval date and any licensing or usage restrictions
+
+Raw datasets are excluded from Git version control.
