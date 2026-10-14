@@ -11,3 +11,55 @@ For every variable, record:
 - Retrieval date and any licensing or usage restrictions
 
 Raw datasets are excluded from Git version control.
+
+============================================================
+Dataset: Daily US Treasury Yields
+============================================================
+
+Local file:
+data/raw/treasury_yields_daily_2020_2025.csv
+
+Source:
+Federal Reserve Bank of St. Louis, FRED
+https://fred.stlouisfed.org/
+
+Series:
+DGS2  - 2-Year Treasury constant maturity yield
+DGS5  - 5-Year Treasury constant maturity yield
+DGS10 - 10-Year Treasury constant maturity yield
+
+Observation period:
+2020-01-01 through 2025-12-31
+
+Frequency:
+Daily; observations are not available for every calendar day.
+
+Units:
+Percent, not seasonally adjusted.
+
+Initial download:
+Retrieved using the fredapi Python package and a locally
+stored FRED API key loaded from the project .env file.
+
+Initial dimensions:
+1,566 rows and 3 columns, excluding the date index.
+
+Missing observations:
+66 missing values in each series in the initial download.
+Missing observations have not been imputed.
+
+Intended use:
+Describe interest-rate conditions and help construct
+features for the corporate refinancing regime model.
+
+Limitations:
+Treasury yields are benchmark risk-free rates, not
+company-specific borrowing rates. They do not capture the
+full credit spread, fees, covenants, or terms of a particular
+company's refinancing.
+
+Reproducibility:
+The raw CSV is locally stored and excluded from Git.
+The download function is in dslc_documentation/functions/fred_data.py.
+The API key is stored in .env and must never be committed.
+
